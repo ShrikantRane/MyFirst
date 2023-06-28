@@ -2,7 +2,7 @@ var exp=require('express');
 var bp=require('body-parser');
 
 var app=exp();
-app.use(express.static(path.join(__dirname,'public')));
+app.use(exp.static(path.join(__dirname,'public')));
 app.use(bp.urlencoded({extended: false}));
 app.use(exp.static('public'))
 app.listen(9000,function(){
